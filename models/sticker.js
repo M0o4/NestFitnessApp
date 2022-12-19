@@ -2,7 +2,13 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Sticker extends Model {
-    static associate(models) {}
+    static associate(models) {
+      Sticker.belongsToMany(models.Statistic, {
+        through: 'StickerLog',
+        as: 'statistics',
+        foreignKey: 'stickerId',
+      });
+    }
   }
   Sticker.init(
     {

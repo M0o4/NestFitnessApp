@@ -2,7 +2,13 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Reward extends Model {
-    static associate(models) {}
+    static associate(models) {
+      Reward.belongsToMany(models.User, {
+        through: 'UserReward',
+        as: 'users',
+        foreignKey: 'rewardId',
+      });
+    }
   }
   Reward.init(
     {

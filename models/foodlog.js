@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   FoodLog.init(
     {
       foodId: DataTypes.INTEGER,
-      statisticId: DataTypes.NUMBER,
+      statisticId: DataTypes.INTEGER,
+      isEaten: DataTypes.BOOLEAN,
     },
     {
       sequelize,

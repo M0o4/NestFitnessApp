@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   StickerLog.init(
     {
       stickerId: DataTypes.INTEGER,
-      statisticId: DataTypes.NUMBER,
+      statisticId: DataTypes.INTEGER,
     },
     {
       sequelize,
