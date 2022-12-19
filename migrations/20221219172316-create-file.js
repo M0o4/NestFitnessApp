@@ -7,31 +7,31 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
-      filePaht: {
-        type: Sequelize.STRING
+      filePath: {
+        type: Sequelize.STRING,
       },
       mimeType: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       size: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DOUBLE,
       },
       bucket: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Files');
-  }
+  },
 };
