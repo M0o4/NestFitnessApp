@@ -22,10 +22,9 @@ export class User extends Model<User> {
   password: string;
 
   @Column({
-    type: DataType.ENUM,
-    values: ['male', 'female'],
+    type: DataType.INTEGER,
   })
-  gender: string;
+  sex: number;
 
   @Column({
     type: DataType.DOUBLE,
@@ -43,9 +42,8 @@ export class User extends Model<User> {
   birthDate: Date;
 
   @Column({
-    type: DataType.ENUM,
-    values: ['trainer', 'user'],
+    type: DataType.INTEGER,
     allowNull: false,
   })
-  role: string;
+  role: number;
 }
