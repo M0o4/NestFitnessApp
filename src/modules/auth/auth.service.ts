@@ -28,7 +28,8 @@ export class AuthService {
 
   public async login(user) {
     const token = await this.generateToken(user);
-    return { user, token };
+    const foundedUser = await this.userService.findOneByLogin(user.login);
+    return { id: foundedUser.id, token };
   }
 
   public async create(user) {
