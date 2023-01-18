@@ -4,7 +4,6 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 export class User extends Model<User> {
   @Column({
     type: DataType.STRING,
-    allowNull: false,
   })
   username: string;
 
@@ -43,7 +42,6 @@ export class User extends Model<User> {
 
   @Column({
     type: DataType.INTEGER,
-    allowNull: false,
   })
   role: number;
 }
